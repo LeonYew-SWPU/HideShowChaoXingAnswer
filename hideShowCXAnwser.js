@@ -10,18 +10,20 @@
 // ==/UserScript==
 (function() {
     'use strict';
-    // Your code here...
     document.onkeydown = function(e) {
         if (e.key == '`') {
-            var answers = document.getElementsByClassName('mark_answer');
-            for (var i = 0; i < answers.length; i++) {
-                if (answers[i].style.color == '') {
-                    answers[i].style.color = 'transparent'; // 设置字体颜色为透明，达到隐藏的效果
-                } else {
-                    answers[i].style.color = ''; // 恢复字体颜色
+            var myAnswers = document.getElementsByClassName('colorDeep marginRight40 fl');
+            var rightAnswers = document.getElementsByClassName('colorGreen marginRight40 fl');
+            for (var i = 0; i < myAnswers.length; i++) {
+                if(myAnswers[i].style.color == ""){
+                    myAnswers[i].style.color = "transparent";
+                    rightAnswers[i].style.color = "transparent";
+                }else{
+                    myAnswers[i].style.color = "";
+                    rightAnswers[i].style.color = "";
                 }
             }
-            console.log((answers[0].style.color == 'transparent') ? '答案已隐藏' : '答案已显示');
+            console.log((myAnswers[0].style.color == 'transparent') ? '答案已隐藏' : '答案已显示');
         }
     }
 })();
