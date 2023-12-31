@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         超星隐藏显示正确答案
 // @namespace    http://tampermonkey.net/
-// @version      v1.0.3
+// @version      v1.1.0
 // @description  通过单击键盘左上方的~/`/·键来隐藏/显示正确答案，用于期末复习
 // @author       LeonYew-SWPU
 // @match        https://mooc1.chaoxing.com/mooc-ans/*
