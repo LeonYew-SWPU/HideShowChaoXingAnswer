@@ -17,12 +17,25 @@
 |[Chrome应用店（🪜）](https://chromewebstore.google.com/detail/scriptcat/)|[Chrome应用店（🪜）](https://chromewebstore.google.com/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/)
 
 ### 1. 安装脚本
-[📦v1.0 点我安装⬇️（GreasyFork）](https://update.greasyfork.org/scripts/483510.user.js)
+[📦v1.2.6 【点我安装⬇️】（GreasyFork）](https://update.greasyfork.org/scripts/483510.user.js)
 
-[📦v1.0 点我安装⬇️（脚本猫）](https://scriptcat.org/scripts/code/1460/%E8%B6%85%E6%98%9F%E9%9A%90%E8%97%8F%E6%98%BE%E7%A4%BA%E6%AD%A3%E7%A1%AE%E7%AD%94%E6%A1%88.user.js)
+[📦v1.2.6 【点我安装⬇️】（脚本猫）](https://scriptcat.org/scripts/code/1460/%E8%B6%85%E6%98%9F%E9%9A%90%E8%97%8F%E6%98%BE%E7%A4%BA%E6%AD%A3%E7%A1%AE%E7%AD%94%E6%A1%88.user.js)
 
 
-## 四、更新 | Updates
+## 四、开发计划 | Dev To-Do List
+> 未实现 📃
+>> 计划开发 📆
+- [ ] 支持章节检测的题目
+- [ ] 支持任务页面的题目答案隐藏
+- [ ] 增加GUI界面-设置页面
+- [ ] 设置快捷键
+- [ ] 支持将答案导出到Anki、MarkJi中
+>> 不准备开发 ✖️
+
+> 已实现 ✅
+- [x] “课程-作业”中的作业已支持隐藏答案复习
+- [x] 通过点击按钮可显示隐藏答案
+## 五、更新 | Updates
 **Version: 1.2.6**
 1. 修改了README使其更人性化
 2. 修改了js文件的@version，去掉了版本号前的“v”，避免安装脚本时出现“vv1.x.x”
