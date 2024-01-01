@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         超星隐藏显示正确答案
 // @namespace    http://tampermonkey.net/
-// @version      v1.2.4
+// @version      v1.2.5
 // @description  通过单击键盘左上方的~/`/·键来隐藏/显示正确答案，用于期末复习
 // @author       LeonYew-SWPU
 // @match        https://mooc1.chaoxing.com/mooc-ans/*
@@ -20,12 +20,16 @@
 
     // 初始化，获取元素
     var answersWindow = document.getElementsByClassName('mark_answer'); // 获取答案框div
-    var answers = document.getElementsByClassName('mark_key clearfix'); // 获取答案文字div
+    var answersChoice = document.getElementsByClassName('mark_key clearfix'); // 获取答案选择题div
+    var answerFill = {
+        'colorDeep': document.getElementsByClassName('mark_fill colorDeep'), // 获取填空题我的答案
+        'colorGreen': document.getElementsByClassName('mark_fill colorGreen') // 填空题正确答案
+    }
     var answerStatuses = document.getElementsByClassName('mark_score'); // 获取答案状态div（对错+分数）
     var lightGrey = '#f9f9f9'; // 浅灰色
     var isHidden = false; // 答案隐藏指标
 
-    // 遍历答案框div,添加遮罩层
+    // 遍历答案框div,添加遮罩层，初始化Status
     for (var i = 0; i < answersWindow.length; i++) {
         addCover(answersWindow[i]);
     }
@@ -41,13 +45,23 @@
         isHidden = !isHidden;
         // 遍历答案div
         // 如果遍历窗口div的话，遇到简答题会找不到answers[i].style，也找不到answerStatuses[i].style
-        for (var i = 0; i < answers.length; i++) {
-            answers[i].style.display = (isHidden) ? 'none' : 'block'; // 隐藏答案文字
-            answersWindow[i].style.backgroundColor = (isHidden) ? lightGrey : ''; // 背景调灰
+        for (var i = 0; i < answersWindow.length; i++) {
+            // 每个answerWindow一定有的元素
             answersWindow[i].getElementsByClassName('cover')[0].style.display = (isHidden) ? 'block' : 'none'; // 显示遮罩层
             answersWindow[i].getElementsByClassName('icon-hide')[0].style.display = (isHidden) ? 'none' : 'inline'; // 隐藏眼睛图标
             answersWindow[i].getElementsByClassName('icon-eye')[0].style.display = (isHidden) ? 'inline' : 'none'; // 显示闭眼图标
+            answersWindow[i].style.backgroundColor = (isHidden) ? lightGrey : ''; // 背景调灰
             answerStatuses[i].style.display = (isHidden) ? 'none' : 'block'; // 隐藏答案状态div
+
+            // 每个answerWindow可能有的元素：选择题答案
+            if (answersChoice[i]) {
+                answersChoice[i].style.display = (isHidden) ? 'none' : 'block'; // 隐藏选择题答案
+            }
+            // 每个answerWindow可能有的元素：选择题答案、填空答案
+            if (answerFill.colorDeep[i]) {
+                answerFill.colorDeep[i].style.display = (isHidden) ? 'none' : 'block'; // 隐藏填空题我的答案
+                answerFill.colorGreen[i].style.display = (isHidden) ? 'none' : 'block'; // 隐藏填空题正确答案
+            }
             
         }
         // 后台提示

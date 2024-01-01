@@ -2,7 +2,7 @@
 ## 作用
 隐藏/显示作业详情页的答案，用于自己期末做题测试复习效果。思考之后再看正确答案。
 <div align="center">
-    <img src="pics/ShowEffect1.gif" alt="效果演示" width="300">
+    <img src="https://cdn.jsdelivr.net/gh/LeonYew-SWPU/HideShowChaoXingAnswer@main/pics/ShowEffect1.gif" alt="效果演示" width="300">
 </div>
 
 ## 使用方法
@@ -14,6 +14,11 @@
 [📦v1.0 点我安装⬇️（脚本猫）](https://scriptcat.org/scripts/code/1460/%E8%B6%85%E6%98%9F%E9%9A%90%E8%97%8F%E6%98%BE%E7%A4%BA%E6%AD%A3%E7%A1%AE%E7%AD%94%E6%A1%88.user.js)
 
 ## 没人想看的更新日志
+**Version: 1.2.5**
+1. 修复了填空题不支持隐藏的BUG
+2. 修复了GreasyFork上看不到README的GIF效果图的BUG
+3. 引发了新的“特性”：填空题的div隐藏后不会保持原来的答题框大小，会造成题目位移。
+
 **Version: 1.2.4**
 1. 修改了README.MD的效果图片
 2. 修改了js脚本中的版本号
