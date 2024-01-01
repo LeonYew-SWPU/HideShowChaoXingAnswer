@@ -1,19 +1,32 @@
 # 学习通复习显示隐藏答案 HideShowChaoXingAnwer
-## 作用
+## 一、作用 | Effects
 隐藏/显示作业详情页的答案，用于自己期末做题测试复习效果。思考之后再看正确答案。
 <div align="center">
     <img src="https://cdn.jsdelivr.net/gh/LeonYew-SWPU/HideShowChaoXingAnswer@main/pics/ShowEffect1.gif" alt="效果演示" width="300">
 </div>
 
-## 使用方法
+## 二、使用方法 | How to use
 通过单击键盘左上方的 <kbd>~</kbd> 键来隐藏/显示正确答案，用于期末复习
 
-## 快速安装
+## 三、快速安装 | Getting Started
+
+### 0. 安装扩展
+|脚本猫🐱（国内✔️） |篡改猴🐵（✅推荐）|
+|--|--|
+|[Edge商店（✔️）](https://microsoftedge.microsoft.com/addons/detail/scriptcat/)|[Edge商店（✔️）](https://microsoftedge.microsoft.com/addons/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/)|
+|[Chrome应用店（🪜）](https://chromewebstore.google.com/detail/scriptcat/)|[Chrome应用店（🪜）](https://chromewebstore.google.com/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/)
+
+### 1. 安装脚本
 [📦v1.0 点我安装⬇️（GreasyFork）](https://update.greasyfork.org/scripts/483510.user.js)
 
 [📦v1.0 点我安装⬇️（脚本猫）](https://scriptcat.org/scripts/code/1460/%E8%B6%85%E6%98%9F%E9%9A%90%E8%97%8F%E6%98%BE%E7%A4%BA%E6%AD%A3%E7%A1%AE%E7%AD%94%E6%A1%88.user.js)
 
-## 没人想看的更新日志
+
+## 四、更新 | Updates
+**Version: 1.2.6**
+1. 修改了README使其更人性化
+2. 修改了js文件的@version，去掉了版本号前的“v”，避免安装脚本时出现“vv1.x.x”
+
 **Version: 1.2.5**
 1. 修复了填空题不支持隐藏的BUG
 2. 修复了GreasyFork上看不到README的GIF效果图的BUG
